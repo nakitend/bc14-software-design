@@ -68,3 +68,7 @@ class Laptop(Computer, WiFiDevice, BluetoothDevice):
 
     def fold(self):
         print("Folding...")
+
+
+
+

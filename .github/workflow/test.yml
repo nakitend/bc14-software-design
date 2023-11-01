@@ -1,0 +1,16 @@
+name: Monicah Is Pretty
+on:
+  push: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python 3.10-slim
+steps:
+  -name: clone from github
+   uses: actions/checkout@v3
+  -name: Install requirements
+   run: pip install -r requirements.txt
+  -name: Run the server
+   run: |
+    python manage.py runserver
